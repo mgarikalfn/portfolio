@@ -16,7 +16,7 @@ export default function Skills() {
         <h2
           style={{
             fontFamily: "var(--font-serif)",
-            fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
+            fontSize: "clamp(2rem, 3vw, 2.8rem)",
             fontWeight: 700,
             color: "var(--color-text)",
             margin: "0 0 3rem",
@@ -33,10 +33,10 @@ export default function Skills() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "140px 1fr",
+                gridTemplateColumns: "160px 1fr",
                 gap: "1.5rem",
                 alignItems: "start",
-                padding: "1.25rem 0",
+                padding: "1.5rem 0",
                 borderBottom: "1px solid var(--color-border)",
               }}
               className="skill-row"
@@ -44,15 +44,15 @@ export default function Skills() {
               <span
                 style={{
                   fontFamily: "var(--font-mono)",
-                  fontSize: "0.68rem",
+                  fontSize: "0.85rem",
                   color: "var(--color-muted)",
-                  letterSpacing: "0.06em",
+                  letterSpacing: "0.04em",
                   paddingTop: "3px",
                 }}
               >
                 {group.category}
               </span>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
                 {group.skills.map((skill) => (
                   <SkillTag key={skill} label={skill} />
                 ))}
@@ -76,10 +76,10 @@ function SkillTag({ label }: { label: string }) {
     <span
       style={{
         fontFamily: "var(--font-mono)",
-        fontSize: "0.72rem",
+        fontSize: "0.88rem",
         color: "var(--color-muted)",
         border: "1px solid var(--color-border)",
-        padding: "2px 8px",
+        padding: "3px 10px",
         borderRadius: "1px",
         transition: "color 0.15s, border-color 0.15s",
         cursor: "default",
