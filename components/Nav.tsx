@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef, useCallback } from "react";
+import { RESUME_URL } from "@/data/resume";
 
 const navItems = [
   { id: "hero",       label: "01 — Home" },
@@ -114,16 +115,17 @@ export default function Nav() {
       >
         <div style={{
           fontFamily: "var(--font-mono)",
-          fontSize: "0.68rem",
+          fontSize: "0.85rem",
           color: "var(--color-accent)",
           letterSpacing: "0.14em",
-          marginBottom: "2.5rem",
+          marginBottom: "3rem",
+          marginTop: "2rem",
         }}>
           GKD<span style={{ opacity: 0.5 }}> /</span>
           <span className="cursor-blink" aria-hidden="true" style={{ marginLeft: 2 }} />
         </div>
 
-        <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "2px" }}>
+        <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "4px" }}>
           {navItems.map(({ id, label }) => {
             const isActive = active === id;
             return (
@@ -135,10 +137,10 @@ export default function Nav() {
                     border: "none",
                     cursor: "pointer",
                     fontFamily: "var(--font-mono)",
-                    fontSize: "0.7rem",
+                    fontSize: "0.82rem",
                     letterSpacing: "0.04em",
                     color: isActive ? "var(--color-accent)" : "var(--color-muted)",
-                    padding: "6px 0",
+                    padding: "9px 0",
                     textAlign: "left",
                     width: "100%",
                     transition: "color 0.15s",
@@ -166,13 +168,43 @@ export default function Nav() {
         <div style={{
           marginTop: "auto",
           paddingTop: "2.5rem",
-          fontFamily: "var(--font-mono)",
-          fontSize: "0.62rem",
-          color: "var(--color-muted)",
-          lineHeight: 1.7,
-          opacity: 0.5,
+          display: "flex",
+          flexDirection: "column",
+          gap: "1rem",
         }}>
-          Addis Ababa, ET
+          {/* Resume link */}
+          <a
+            href={RESUME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "var(--font-mono)",
+              fontSize: "0.78rem",
+              color: "var(--color-muted)",
+              letterSpacing: "0.04em",
+              textDecoration: "none",
+              transition: "color 0.15s",
+              display: "inline-block",
+            }}
+            onMouseEnter={(e) =>
+              ((e.currentTarget as HTMLAnchorElement).style.color = "var(--color-accent)")
+            }
+            onMouseLeave={(e) =>
+              ((e.currentTarget as HTMLAnchorElement).style.color = "var(--color-muted)")
+            }
+          >
+            [ Resume ]
+          </a>
+
+          <span style={{
+            fontFamily: "var(--font-mono)",
+            fontSize: "0.72rem",
+            color: "var(--color-muted)",
+            lineHeight: 1.7,
+            opacity: 0.5,
+          }}>
+            Addis Ababa, ET
+          </span>
         </div>
       </nav>
 
@@ -185,13 +217,13 @@ export default function Nav() {
           background: "rgba(13,13,15,0.96)",
           backdropFilter: "blur(10px)",
           borderBottom: "1px solid var(--color-border)",
-          zIndex: 110,        /* above dropdown (99) and backdrop (98) */
+          zIndex: 110,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           padding: "11px 20px",
         }}
-        className="lg:hidden"
+        className="mobile-bar"
       >
         <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "var(--color-accent)", letterSpacing: "0.12em" }}>
           GKD
