@@ -33,8 +33,8 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-mono);
-  font-size: 0.9375rem;
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -112,6 +112,37 @@ body::before {
   transition: opacity 0.15s;
 }
 .bracket-link:hover { opacity: 0.75; }
+
+/* ─── Nav: sidebar hide/show (beats inline display:flex with !important) ─── */
+/* Desktop sidebar hidden on mobile */
+nav[aria-label="Site navigation"] {
+  display: none !important;
+}
+@media (min-width: 1024px) {
+  nav[aria-label="Site navigation"] {
+    display: flex !important;
+  }
+}
+
+/* Mobile header hidden on desktop */
+header.mobile-bar {
+  display: flex !important;
+}
+@media (min-width: 1024px) {
+  header.mobile-bar {
+    display: none !important;
+  }
+}
+
+/* ─── Responsive section padding ─── */
+/* All sections use padding: "100px 48px 100px 0" on desktop (left=0, sidebar handles it) */
+/* On mobile/tablet we add left padding so content doesn't touch the screen edge         */
+@media (max-width: 1023px) {
+  #hero, #projects, #skills, #experience, #education, #contact {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
 
 /* ─── Reduced motion: kill everything ─── */
 @media (prefers-reduced-motion: reduce) {
