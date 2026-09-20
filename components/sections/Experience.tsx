@@ -30,7 +30,7 @@ export default function Experience() {
         <h2
           style={{
             fontFamily: "var(--font-serif)",
-            fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
+            fontSize: "clamp(2rem, 3vw, 2.8rem)",
             fontWeight: 700,
             color: "var(--color-text)",
             margin: "0 0 3rem",
@@ -46,43 +46,43 @@ export default function Experience() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "160px 1fr",
-              gap: "2rem",
+              gridTemplateColumns: "180px 1fr",
+              gap: "2.5rem",
               alignItems: "start",
             }}
             className="exp-row"
           >
             <div>
-              <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", color: "var(--color-accent)", margin: "0 0 4px", letterSpacing: "0.04em", opacity: 0.85 }}>
+              <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.88rem", color: "var(--color-accent)", margin: "0 0 5px", letterSpacing: "0.03em", opacity: 0.85 }}>
                 {exp.period}
               </p>
-              <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", color: "var(--color-muted)", margin: 0 }}>
+              <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.82rem", color: "var(--color-muted)", margin: 0 }}>
                 {exp.location}
               </p>
             </div>
             <div>
-              <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.1rem", fontWeight: 600, color: "var(--color-text)", margin: "0 0 3px", letterSpacing: "-0.01em" }}>
+              <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.3rem", fontWeight: 600, color: "var(--color-text)", margin: "0 0 5px", letterSpacing: "-0.01em" }}>
                 {exp.role}
               </h3>
-              <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--color-muted)", margin: "0 0 14px" }}>
+              <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.9rem", color: "var(--color-muted)", margin: "0 0 18px" }}>
                 {exp.company}
-                <span style={{ opacity: 0.4, margin: "0 6px" }}>·</span>
+                <span style={{ opacity: 0.4, margin: "0 8px" }}>·</span>
                 {exp.department}
               </p>
-              <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: "7px" }}>
+              <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: "10px" }}>
                 {exp.bullets.map((b, j) => (
                   <li
                     key={j}
                     style={{
                       fontFamily: "var(--font-mono)",
-                      fontSize: "0.78rem",
+                      fontSize: "0.95rem",
                       color: "var(--color-text)",
-                      lineHeight: 1.65,
-                      paddingLeft: "1.1rem",
+                      lineHeight: 1.75,
+                      paddingLeft: "1.25rem",
                       position: "relative",
                     }}
                   >
-                    <span style={{ position: "absolute", left: 0, color: "var(--color-accent)", opacity: 0.7, fontSize: "0.7rem" }}>—</span>
+                    <span style={{ position: "absolute", left: 0, color: "var(--color-accent)", opacity: 0.7 }}>—</span>
                     {b}
                   </li>
                 ))}
