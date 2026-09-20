@@ -46,9 +46,6 @@ export default function Home() {
         @media (min-width: 1024px) {
           .main-content { margin-left: 220px !important; }
         }
-        @media (max-width: 1023px) {
-          .main-content { padding-left: 24px !important; padding-right: 24px !important; }
-        }
       `}</style>
     </>
   );
