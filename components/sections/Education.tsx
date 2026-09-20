@@ -15,7 +15,7 @@ export default function Education() {
         <h2
           style={{
             fontFamily: "var(--font-serif)",
-            fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
+            fontSize: "clamp(2rem, 3vw, 2.8rem)",
             fontWeight: 700,
             color: "var(--color-text)",
             margin: "0 0 3rem",
@@ -28,36 +28,36 @@ export default function Education() {
 
       <FadeIn delay={0.07}>
         <div
-          style={{ display: "grid", gridTemplateColumns: "160px 1fr", gap: "2rem", alignItems: "start" }}
+          style={{ display: "grid", gridTemplateColumns: "180px 1fr", gap: "2.5rem", alignItems: "start" }}
           className="edu-row"
         >
           <div>
-            <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", color: "var(--color-accent)", margin: "0 0 4px", letterSpacing: "0.04em", opacity: 0.85 }}>
+            <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.88rem", color: "var(--color-accent)", margin: "0 0 5px", letterSpacing: "0.03em", opacity: 0.85 }}>
               2022 – 2026
             </p>
-            <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", color: "var(--color-muted)", margin: 0 }}>
+            <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.82rem", color: "var(--color-muted)", margin: 0 }}>
               Haramaya, Ethiopia
             </p>
           </div>
           <div>
-            <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.1rem", fontWeight: 600, color: "var(--color-text)", margin: "0 0 4px", letterSpacing: "-0.01em" }}>
+            <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.3rem", fontWeight: 600, color: "var(--color-text)", margin: "0 0 6px", letterSpacing: "-0.01em" }}>
               BSc Software Engineering
             </h3>
-            <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--color-muted)", margin: "0 0 14px" }}>
+            <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.9rem", color: "var(--color-muted)", margin: "0 0 18px" }}>
               Haramaya University
             </p>
             <div
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: "8px",
+                gap: "10px",
                 border: "1px solid var(--color-border)",
-                padding: "5px 12px",
+                padding: "7px 16px",
                 borderRadius: "1px",
               }}
             >
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.65rem", color: "var(--color-muted)", letterSpacing: "0.06em" }}>CGPA</span>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.9rem", fontWeight: 700, color: "var(--color-accent)", letterSpacing: "0.04em" }}>3.77 / 4.00</span>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.82rem", color: "var(--color-muted)", letterSpacing: "0.06em" }}>CGPA</span>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: "1.05rem", fontWeight: 700, color: "var(--color-accent)", letterSpacing: "0.04em" }}>3.77 / 4.00</span>
             </div>
           </div>
         </div>
