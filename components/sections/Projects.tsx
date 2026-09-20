@@ -17,9 +17,9 @@ export default function Projects() {
         <p
           style={{
             fontFamily: "var(--font-mono)",
-            fontSize: "0.68rem",
+            fontSize: "0.82rem",
             color: "var(--color-accent)",
-            letterSpacing: "0.1em",
+            letterSpacing: "0.08em",
             marginBottom: "0.5rem",
             opacity: 0.7,
           }}
@@ -29,10 +29,10 @@ export default function Projects() {
         <h2
           style={{
             fontFamily: "var(--font-serif)",
-            fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
+            fontSize: "clamp(2rem, 3vw, 2.8rem)",
             fontWeight: 700,
             color: "var(--color-text)",
-            margin: "0 0 0.6rem",
+            margin: "0 0 0.75rem",
             letterSpacing: "-0.02em",
           }}
         >
@@ -41,11 +41,11 @@ export default function Projects() {
         <p
           style={{
             fontFamily: "var(--font-mono)",
-            fontSize: "0.78rem",
+            fontSize: "1rem",
             color: "var(--color-muted)",
             marginBottom: "3rem",
-            maxWidth: "520px",
-            lineHeight: 1.65,
+            maxWidth: "560px",
+            lineHeight: 1.75,
           }}
         >
           Each project below is a case study — expand{" "}
