@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+/* ─── Theme tokens (Tailwind v4 CSS-native config) ─── */
+@theme inline {
+  /* Colors */
+  --color-bg:           #0d0d0f;
+  --color-surface:      #141416;
+  --color-border:       rgba(255, 255, 255, 0.08);
+  --color-text:         #e8e6e1;
+  --color-muted:        #6b6966;
+  --color-accent:       #2DD4BF;
+  --color-accent-dim:   rgba(45, 212, 191, 0.10);
+  --color-accent-glow:  rgba(45, 212, 191, 0.20);
+
+  /* Fonts */
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-mono:  var(--font-jetbrains), "Courier New", monospace;
+}
+
+/* ─── Base reset ─── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Subtle grain texture ─── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+}
+
+/* ─── Typography helpers ─── */
+.font-serif { font-family: var(--font-serif); }
+.font-mono  { font-family: var(--font-mono); }
+
+/* ─── Blinking cursor (cyan block) ─── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 9px;
+  height: 1.05em;
+  background-color: var(--color-accent);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+  border-radius: 1px;
+}
+
+/* ─── Focus ring ─── */
+:focus-visible {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* ─── Selection ─── */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar        { width: 4px; }
+::-webkit-scrollbar-track  { background: var(--color-bg); }
+::-webkit-scrollbar-thumb  { background: var(--color-border); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-muted); }
+
+/* ─── Project section hover (GPU-cheap) ─── */
+.project-section-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.project-section-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.30),
+              0 4px 24px rgba(45, 212, 191, 0.08);
+  border-color: rgba(45, 212, 191, 0.20) !important;
+}
+
+/* ─── Bracket link hover effect ─── */
+.bracket-link {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: opacity 0.15s;
+}
+.bracket-link:hover { opacity: 0.75; }
+
+/* ─── Reduced motion: kill everything ─── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .cursor-blink {
+    animation: none !important;
+    opacity: 1;
+  }
+}
