@@ -49,8 +49,9 @@ export const projects: Project[] = [
     tech: ["C#", "ASP.NET Core", "Entity Framework Core", "SQL Server", "MediatR", "CQRS", "Jira API"],
     githubUrl: "https://github.com/mgarikalfn/projectTrackerSystem",
     images: [
-      { src:"/projects/project-screen-1.png",alt: "ProjectTracker — project health dashboard" },
-      { src:"/projects/project-screen-2.png",alt: "ProjectTracker — risk scoring breakdown" },
+     
+      {  src:"/projects/pg-1.png",alt: "ProjectTracker — project health dashboard" },
+      {  src:"/projects/pg-2.png",alt: "ProjectTracker — risk scoring breakdown" },
     ],
     keyDecisions: [
       "Applied CQRS with MediatR to cleanly separate the read path (reporting queries that aggregate across projects) from the write path (sync jobs mutating state). This made it trivial to optimise each side independently — the read path uses compiled EF Core queries, the write path uses explicit transactions.",
@@ -86,8 +87,8 @@ export const projects: Project[] = [
     liveUrl: "https://project-managment-ujod.vercel.app/",
     githubUrl: "https://github.com/mgarikalfn/Kinetix",
     images: [
-      { src:"/projects/pg-1.png",alt: "Kinetix — Kanban board view" },
-      {src:"/projects/pg-2.png", alt: "Kinetix — data table with filters" },
+      { src:"/projects/project-screen-1.png",alt: "Kinetix — Kanban board view" },
+      {src:"/projects/project-screen-2.png",alt: "Kinetix — data table with filters" },
      
     ],
     keyDecisions: [
