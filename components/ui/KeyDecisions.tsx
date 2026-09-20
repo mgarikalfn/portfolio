@@ -28,7 +28,7 @@ export default function KeyDecisions({ decisions }: Props) {
           border: "none",
           cursor: "pointer",
           fontFamily: "var(--font-mono)",
-          fontSize: "0.75rem",
+          fontSize: "0.88rem",
           color: "var(--color-accent)",
           letterSpacing: "0.05em",
           padding: 0,
