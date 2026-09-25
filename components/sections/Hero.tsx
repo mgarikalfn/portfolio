@@ -245,7 +245,7 @@ function ProfilePhoto() {
   }
   return (
     <Image
-      src="/profile.jpg"
+      src="/profile_image.jpg"
       alt="Girum Kenenisa Desissa"
       fill
       style={{ objectFit: "cover" }}
